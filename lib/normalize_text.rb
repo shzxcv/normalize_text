@@ -1,4 +1,6 @@
-require "normalize_text/version"
+# frozen_string_literal: true
+
+require_relative "normalize_text/version"
 
 module NormalizeText
   class Error < StandardError; end
