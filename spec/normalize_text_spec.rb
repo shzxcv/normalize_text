@@ -99,7 +99,7 @@ RSpec.describe NormalizeText do
       expect('南アルプスの　天然水　Ｓｐａｒｋｉｎｇ　Ｌｅｍｏｎ　レモン一絞り'.normalize).to \
           eq '南アルプスの天然水Sparking Lemonレモン一絞り'
 
-      expect('南アルプスの　天然水-　Ｓｐａｒｋｉｎｇ*　Ｌｅｍｏｎ+　レモン一絞り'.normalize).to\
+      expect('南アルプスの　天然水-　Ｓｐａｒｋｉｎｇ*　Ｌｅｍｏｎ+　レモン一絞り'.normalize).to \
           eq '南アルプスの天然水-Sparking*Lemon+レモン一絞り'
     end
   end
