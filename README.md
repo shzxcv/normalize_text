@@ -1,8 +1,10 @@
 # NormalizeText
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/normalize_text`. To experiment with that code, run `bin/console` for an interactive prompt.
+This Gem normalizes the text.
 
-TODO: Delete this and the text above, and describe your gem
+The normalization is based on the normalization rules of mecab-neologd, and some of my own additions.
+
+https://github.com/neologd/mecab-ipadic-neologd/wiki/Regexp.ja
 
 ## Installation
 
@@ -22,7 +24,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+require 'normalize_text'
+
+'検索 エンジン 自作 入門 を 買い ました!!!'.normalize
+=> "検索エンジン自作入門を買いました!!!"
+
+'　　　ＰＲＭＬ　　副　読　本　　　'.normalize
+=> "PRML副読本"
+
+'南アルプスの　天然水　Ｓｐａｒｋｉｎｇ　Ｌｅｍｏｎ　レモン一絞り'.normalize
+=> "南アルプスの天然水Sparking Lemonレモン一絞り"
+```
+
+For other normalization rules, please refer to the spec file
+https://github.com/sho-jp/normalize_text/blob/main/spec/normalize_text_spec.rb
 
 ## Development
 
