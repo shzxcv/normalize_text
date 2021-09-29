@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     normalize_text (0.1.0)
+      remove_emoji (~> 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -49,7 +50,7 @@ PLATFORMS
 DEPENDENCIES
   normalize_text!
   rake (~> 13.0)
-  remove_emoji
+  remove_emoji (~> 3.0.0)
   rspec (~> 3.0)
   rubocop (~> 1.7)
 

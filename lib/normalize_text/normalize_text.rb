@@ -7,6 +7,7 @@ class String
 
     text = RemoveEmoji::Sanitize.call(text)
     text = text.each_char.select { |c| c.bytes.count < 4 }.join
+
     text = text.unicode_normalize(:nfkc)
 
     hypon_reg = /(?:˗|֊|‐|‑|‒|–|⁃|⁻|₋|−)/
@@ -45,11 +46,9 @@ class String
       )
     end
 
-    text = text.tr(
+    text.tr(
       '！”＃＄％＆’（）＊＋，－．／：；＜＞？＠［￥］＾＿｀｛｜｝〜',
       %q{!"#$%&'()*+,-.\/:;<>?@[¥]^_`{|}~}
     )
-
-    text
   end
 end
