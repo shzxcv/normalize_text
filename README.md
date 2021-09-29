@@ -38,6 +38,7 @@ require 'normalize_text'
 ```
 
 For other normalization rules, please refer to the spec file
+
 https://github.com/sho-jp/normalize_text/blob/main/spec/normalize_text_spec.rb
 
 ## Development
