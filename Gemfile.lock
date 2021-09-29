@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    normalize_text (0.1.0)
+    normalize_text (0.1.1)
       remove_emoji (~> 3.0.0)
 
 GEM
